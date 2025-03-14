@@ -1,8 +1,11 @@
+import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-const URI = "mongodb://localhost:27017/NODE";
+dotenv.config()
 
-mongoose.connect(URI);
+import {config} from "./src/config.js"
+
+mongoose.connect(config.db.URI);
 
 const connection = mongoose.connection;
 
@@ -10,10 +13,10 @@ connection.once("open", () => {
     console.log("DB is Connected");   
 })
 
-connection.on("disconnected", () => {
+connection.once("disconnected", () => {
     console.log("DB is Disconnected");
 })
 
-connection.on("error", () => {
+connection.once("error", (error) => {
     console.log("Error Found " + error);
 })
