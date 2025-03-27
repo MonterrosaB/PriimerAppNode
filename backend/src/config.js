@@ -4,10 +4,15 @@ dotenv.config()
 
 export const config = {
     db : {
-        URI : process.env.DB_URI || "mongodb+srv://rmonterrosa:dObSxsR5BYz6LiV0@miprimercluster.87lyo.mongodb.net/nodejs"      
+        URI : process.env.DB_URI
 
     },
     server : {
-        PORT : process.env.PORT || 4000
+        PORT : process.env.PORT
+    },
+    JWT : {
+        SECRET : process.env.JWT_SECRET,
+        EXPIRESIN : process.env.JWT_EXPIRES
     }
+    
 }

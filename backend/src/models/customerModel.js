@@ -7,22 +7,22 @@ import { Schema, model } from "mongoose";
 const customerSchema = new Schema({
     name: {
         type : String,
-        require : true
+        required : true
     },
     lastname : {
         type : String
     },
     email :  {
         type : String,
-        require : true
+        required : true
     },
     password :  {
         type : String,
-        require : true
+        required : true
     },
     isVerified : {
         type : Boolean,
-        require : true
+        required : true
     }
 },
 {
