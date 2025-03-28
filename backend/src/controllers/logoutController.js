@@ -1,4 +1,4 @@
-const logoutController = {}
+const logoutController = {};
 
 logoutController.logout = async (req, res) =>{
     //Limpiar las cookies
