@@ -50,7 +50,7 @@ try {
             //Función flecha
             (error, token) =>{
                 if(error) console.log("error: "+ error);
-                res.cookie("authToekn", token)
+                res.cookie("authToken", token)
                 res.json({message: "employee saved"})
             }
         )
